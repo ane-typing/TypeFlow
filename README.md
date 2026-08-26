@@ -26,6 +26,22 @@
 
 ---
 
+## 🖼️ 界面预览
+
+**英文指法练习**：标准键位指法渐进课程（基准键 → 全键 + 大小写）+ 真实 QWERTY 键盘可视化。
+
+![英文指法练习](docs/screenshots/english-finger-training.png)
+
+**程序员练习**：Python / Java 切换，符号 → 代码段渐进课程。
+
+![程序员练习](docs/screenshots/programmer-coding.png)
+
+**速度测试**：英文 / 中文 / 代码三板块测速，逐字符高亮。
+
+![速度测试](docs/screenshots/speed-test.png)
+
+---
+
 ## 🚀 安装步骤
 
 > 安装包不放入 Git 仓库（单个文件约 103~110MB，超过 GitHub 100MB 单文件限制），
