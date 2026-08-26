@@ -27,7 +27,9 @@ jobs:
       - name: Build installer + portable
         # win.target 配置为 nsis + portable，一次构建产出两个 exe：
         #   打字练习软件 Setup <版本>.exe（安装版）与 打字练习软件 <版本>.exe（便携版）
-        run: npx electron-builder --win
+        # --publish never：禁止 electron-builder 的隐式发布（它需要 GH_TOKEN），
+        #   改由下方 softprops/action-gh-release 用系统注入的 GITHUB_TOKEN 创建 Release。
+        run: npx electron-builder --win --publish never
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
 
