@@ -28,14 +28,20 @@
 
 ## 🚀 安装步骤
 
+> 安装包不放入 Git 仓库（单个文件约 103~110MB，超过 GitHub 100MB 单文件限制），
+> 由 CI 自动构建后统一发布在 **GitHub Releases** 页面：
+> 👉 <https://github.com/ane-typing/TypeFlow/releases>
+>
+> 点开最新版本的 `Assets` 即可看到两个安装文件，版本号以 Releases 页面为准。
+
 ### 方式一：安装版（推荐）
-1. 下载安装包 `打字练习软件 Setup 0.2.0.exe`（约 103MB）。
+1. 在 Releases 页面下载安装包 `打字练习软件 Setup <版本号>.exe`（约 103MB）。
 2. 双击运行安装程序。
 3. 按向导选择安装目录（默认即可），可勾选「创建桌面快捷方式」。
 4. 点击「完成」，桌面会出现「打字练习软件」快捷方式，双击即可启动。
 
 ### 方式二：便携版（免安装）
-1. 下载便携版 `打字练习软件 0.2.0.exe`（约 110MB）。
+1. 在 Releases 页面下载便携版 `打字练习软件 <版本号>.exe`（约 110MB）。
 2. 双击即可直接运行，无需安装；也可复制到任意目录或 U 盘随身携带。
 
 ### 系统要求
@@ -83,12 +89,14 @@ npm install
 # 开发模式运行
 npm start
 
-# 打包 Windows 安装包
+# 打包 Windows 安装版 + 便携版（输出到 dist/，含两个 exe）
 npm run build
 
-# 打包便携版
+# 只打包便携版（单文件 exe）
 npm run build:portable
 ```
+
+> 本地构建产物（`dist/`）不会提交到仓库，正式安装包由 GitHub Actions 在打 `v*` tag 时自动构建并挂到 Releases。
 
 > 打包遇到 GitHub 下载超时时，可设置国内镜像后重试：
 > ```
