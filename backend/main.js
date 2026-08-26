@@ -61,6 +61,7 @@ function createWindow() {
     minWidth: 900,
     minHeight: 640,
     title: '打字练习软件',
+    icon: path.join(__dirname, '..', 'frontend', 'assets', 'icon.ico'),
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

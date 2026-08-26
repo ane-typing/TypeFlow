@@ -24,9 +24,15 @@ const lessons = [
   { id: 6, name: '文章练习', text: '知识就是力量。读书使人进步。实践出真知。团结就是力量。一寸光阴一寸金。少壮不努力老大徒伤悲。世上无难事只怕有心人。' }
 ];
 
+// 应用设计：无编码的字符（如标点符号）在练习中自动跳过（见 wubiTyping.js 的 skipPunct），
+// 因此这里只校验汉字字符的编码完整性，标点不参与编码检查。
+const HAN_RE = /[\u4e00-\u9fff]/;
+
 let allOk = true;
 for (const lesson of lessons) {
-  const chars = [...lesson.text];
+  const allChars = [...lesson.text];
+  const chars = allChars.filter(ch => HAN_RE.test(ch));
+  const skipped = allChars.length - chars.length;
   const unique = [...new Set(chars)];
   const noCode = chars.filter(ch => !getWubi(ch));
   const uniqueMissing = [...new Set(noCode)];
@@ -34,7 +40,8 @@ for (const lesson of lessons) {
     console.log(`❌ 课程${lesson.id}(${lesson.name}) 缺少编码: ${uniqueMissing.join(' ')}`);
     allOk = false;
   } else {
-    console.log(`✅ 课程${lesson.id}(${lesson.name}) 全部 ${chars.length} 字都有编码`);
+    const skipNote = skipped > 0 ? `（跳过 ${skipped} 个标点）` : '';
+    console.log(`✅ 课程${lesson.id}(${lesson.name}) 全部 ${chars.length} 个汉字都有编码${skipNote}`);
   }
 }
 

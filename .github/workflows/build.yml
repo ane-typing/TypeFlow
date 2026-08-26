@@ -25,6 +25,8 @@ jobs:
         run: npm ci
 
       - name: Build installer + portable
+        # win.target 配置为 nsis + portable，一次构建产出两个 exe：
+        #   打字练习软件 Setup <版本>.exe（安装版）与 打字练习软件 <版本>.exe（便携版）
         run: npx electron-builder --win
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
@@ -36,5 +38,4 @@ jobs:
           prerelease: false
           files: |
             dist/*.exe
-            dist/*.7z
             dist/*.blockmap

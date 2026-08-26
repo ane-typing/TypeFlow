@@ -35,9 +35,8 @@
 4. 点击「完成」，桌面会出现「打字练习软件」快捷方式，双击即可启动。
 
 ### 方式二：便携版（免安装）
-1. 下载压缩包 `打字练习软件 0.2.0.7z`（约 110MB）。
-2. 解压到任意目录。
-3. 进入解压目录，双击 `打字练习软件.exe` 即可运行，无需安装。
+1. 下载便携版 `打字练习软件 0.2.0.exe`（约 110MB）。
+2. 双击即可直接运行，无需安装；也可复制到任意目录或 U 盘随身携带。
 
 ### 系统要求
 - Windows 10 / 11（x64）
@@ -66,7 +65,7 @@
 - **框架**：[Electron](https://www.electronjs.org/)（主进程 + 渲染进程，安全隔离）
 - **前端**：原生 HTML / CSS / JavaScript（无框架，见名知意）
 - **存储**：本地 JSON 文件（`%APPDATA%/打字练习软件/records.json`）
-- **打包**：electron-builder（NSIS 安装包 + 便携版 + 7z）
+- **打包**：electron-builder（NSIS 安装版 + portable 便携版，一次构建产出两个 exe）
 
 ### 安全设计
 - `contextIsolation: true` + `nodeIntegration: false`

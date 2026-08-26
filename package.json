@@ -26,7 +26,11 @@
       "package.json"
     ],
     "win": {
-      "target": "nsis",
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "frontend/assets/icon.ico",
       "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
