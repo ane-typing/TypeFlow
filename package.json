@@ -8,9 +8,10 @@
     "build": "electron-builder --win",
     "build:portable": "electron-builder --win portable"
   },
-  "author": "无上AnE大帝",
+  "author": "AnE Liu",
   "license": "MIT",
   "devDependencies": {
+    "7zip-bin": "^5.2.0",
     "electron": "^43.4.1",
     "electron-builder": "^26.15.3"
   },
@@ -40,7 +41,5 @@
       "shortcutName": "打字练习软件"
     }
   },
-  "dependencies": {
-    "7zip-bin": "^5.2.0"
-  }
+  "dependencies": {}
 }
