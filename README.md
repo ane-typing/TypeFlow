@@ -1,6 +1,10 @@
 # ⌨️ TypeFlow · 打字练习软件
 
-一款**完全离线、本地运行**的 Windows 桌面打字练习软件。帮你循序渐进掌握标准键位指法，量化提升打字速度与准确率。
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows-0078d4.svg)
+![Electron](https://img.shields.io/badge/Electron-43-47848f.svg)
+
+一款**完全离线、本地运行**的 Windows 桌面打字练习软件，帮你循序渐进掌握标准键位指法，量化提升打字速度与准确率。
 
 > 支持 **英文指法 · 拼音 · 五笔 · 程序员 · 速度测试 · 代码速度测试 · 弱项特训 · 成绩记录** 八大板块。
 
@@ -22,16 +26,6 @@
 
 ---
 
-## 📸 截图
-
-> ⚠️ 截图待补充：请把演示截图放入 `docs/screenshots/` 后替换下表。
-
-| 主界面 | 指法练习 | 速度测试 |
-| --- | --- | --- |
-| 待添加 | 待添加 | 待添加 |
-
----
-
 ## 🚀 安装步骤
 
 ### 方式一：安装版（推荐）
@@ -42,10 +36,8 @@
 
 ### 方式二：便携版（免安装）
 1. 下载压缩包 `打字练习软件 0.2.0.7z`（约 110MB）。
-2. 解压到任意目录（如 `D:\打字练习软件`）。
+2. 解压到任意目录。
 3. 进入解压目录，双击 `打字练习软件.exe` 即可运行，无需安装。
-
-> ⚠️ **体积说明**：本软件基于 Electron 框架，内含完整浏览器内核（VS Code、Notion 均如此），故体积较大。安装后磁盘占用约 285MB。后续可升级至基于 Tauri 的 v2.0（安装包 5–10MB）。
 
 ### 系统要求
 - Windows 10 / 11（x64）
@@ -107,22 +99,6 @@ npm run build:portable
 
 ---
 
-## 🧪 测试
-
-项目自带一套 Electron 回归测试（`test/` 与 `.codex-tests/`），可验证核心功能：
-
-```bash
-# 数据完整性校验（文章、代码片段）
-node test/final_check.js
-node test/validate-snippets.js
-node test/validate-codesnippets.js
-
-# 端到端回归（用 Electron 跑，需先 npm install）
-node_modules\electron\dist\electron.exe .codex-tests\harness.js
-```
-
----
-
 ## 📁 项目结构
 
 ```
@@ -136,25 +112,6 @@ TypeFlow/
 └── README.md         # 项目说明
 ```
 
-> 打包产物（`dist/`）、运行时成绩数据（`data/`）、依赖（`node_modules/`）等均被 `.gitignore` 忽略，不会提交到仓库。
-
----
-
-## ⚠️ 已知问题
-
-- **体积较大**：基于 Electron 框架，安装包约 100MB、磁盘占用约 285MB，属框架固有特性。
-- **五笔字典覆盖**：五笔课程依赖内置 `wubiDict.js` 字典，个别生僻字可能无编码，练习时会自动跳过。
-- **中文弱项输入**：弱项特训的中文练习依赖系统输入法（IME），请在练习时切换到中文输入法。
-- 其余已知缺陷已在 v0.2.0 修复（详见 [CHANGELOG.md](CHANGELOG.md)）。
-
----
-
-## 🗺️ 未来规划（Roadmap）
-
-- [ ] **v0.3.0**：成绩导出（CSV / 截图）、每日挑战、更多五笔字词
-- [ ] **v2.0**：迁移 Tauri 框架，安装包降至 5–10MB，支持 macOS / Linux
-- [ ] 可选：打字小游戏（单词雨）
-
 ---
 
 ## 📜 许可证
@@ -163,4 +120,5 @@ TypeFlow/
 
 ---
 
-*作者：无上AnE大帝 ｜ 版本 v0.2.0*
+*作者：AnE Liu ｜ 版本 v0.2.0*
+
