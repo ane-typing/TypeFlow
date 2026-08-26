@@ -1,0 +1,42 @@
+{
+  "name": "typeflow",
+  "version": "0.2.0",
+  "description": "TypeFlow · 打字练习软件 - Electron 桌面应用",
+  "main": "backend/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "build:portable": "electron-builder --win portable"
+  },
+  "author": "无上AnE大帝",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^43.4.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.typing.practice",
+    "productName": "打字练习软件",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "backend/**/*",
+      "frontend/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "打字练习软件"
+    }
+  },
+  "dependencies": {
+    "7zip-bin": "^5.2.0"
+  }
+}

@@ -1,0 +1,21 @@
+global.window = {};
+const path = require('path');
+require(path.join(__dirname, '..', 'frontend', 'code', 'code-snippets.js'));
+const s = global.window.CODE_SNIPPETS;
+console.log('total:', s.length);
+const ids = new Set(), langs = {}, lv = {};
+const problems = [];
+s.forEach((a) => {
+  if (ids.has(a.id)) problems.push('dup id ' + a.id);
+  ids.add(a.id);
+  langs[a.lang] = (langs[a.lang] || 0) + 1;
+  lv[a.level] = (lv[a.level] || 0) + 1;
+  if (!['新手', '老手'].includes(a.level)) problems.push('bad level ' + a.level);
+  const na = a.text.match(/[^\x00-\x7F]/g) || [];
+  if (na.length) problems.push('non-ascii id ' + a.id + ' [' + [...new Set(na)].join('') + ']');
+  if ((a.text.match(/"/g) || []).length % 2) problems.push('unbalanced quotes id ' + a.id);
+});
+console.log('langs:', JSON.stringify(langs));
+console.log('levels:', JSON.stringify(lv));
+console.log('problems:', problems.length ? problems : '(none)');
+console.log('shuffle6:', global.window.shuffleCodeSnippets(6).map((x) => x.id).join(','));
