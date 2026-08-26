@@ -23,6 +23,10 @@ data/
 Thumbs.db
 desktop.ini
 
+# Python（测试脚本）
+__pycache__/
+*.pyc
+
 # 编辑器
 .vscode/
 .idea/

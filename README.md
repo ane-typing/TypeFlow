@@ -108,9 +108,21 @@ TypeFlow/
 ├── test/             # 数据校验与回归脚本
 ├── .codex-tests/     # Electron 端到端回归套件
 ├── .github/          # GitHub Actions 自动打包与发布工作流
+├── CONTRIBUTING.md   # 贡献指南
+├── SECURITY.md       # 安全政策
+├── CODE_OF_CONDUCT.md # 行为准则
 ├── package.json      # 项目配置与打包脚本
 └── README.md         # 项目说明
 ```
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！请先阅读 [贡献指南](CONTRIBUTING.md)。
+
+- 报告安全漏洞请见 [安全政策](SECURITY.md)
+- 社区行为规范见 [行为准则](CODE_OF_CONDUCT.md)
 
 ---
 
