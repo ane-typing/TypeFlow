@@ -129,7 +129,7 @@ TypeFlow/
 ├── backend/          # Electron 主进程（窗口、IPC、数据持久化）
 ├── frontend/         # 前端页面与逻辑（index.html / css / js / en / zh / code）
 ├── test/             # 数据校验与回归脚本
-├── .codex-tests/     # Electron 端到端回归套件
+├── e2e-tests/        # Electron 端到端回归套件
 ├── .github/          # GitHub Actions 自动打包与发布工作流
 ├── CONTRIBUTING.md   # 贡献指南
 ├── SECURITY.md       # 安全政策

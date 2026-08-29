@@ -57,7 +57,7 @@ node test/validate-snippets.js
 node test/validate-codesnippets.js
 
 # 端到端回归（用 Electron 跑，需先 npm install）
-node_modules\electron\dist\electron.exe .codex-tests\harness.js
+node_modules\electron\dist\electron.exe e2e-tests\harness.js
 ```
 
 ## 🚀 提交 Pull Request
